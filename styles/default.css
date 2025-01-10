@@ -1,0 +1,101 @@
+:root {
+
+    --primary: #0275FF;
+    --secondary: #5D666A;
+
+    --background-white: #FFFFFF;
+    --background-gray: #F0F0F0;
+
+    --gray2: #87929F;
+
+    --success:  #00C858;
+    --info: #0275FF;
+    --warning: #FF9800;
+    --error: #FF3819;
+
+    --main-font: 'Outfit', 'Outfit-ext', sans-serif;
+
+    --font-size-h1: 46px;
+    --font-size-h2: 32px;
+    --font-size-h3: 26px;
+    --font-size-h4: 20px;
+    --font-size-normal: 16px;
+    --font-size-small: 14px;
+  
+    --line-height: 135%;
+  
+    --font-weight-bold: 700;
+    --font-weight-regular: 400;
+    --font-weight-semi-bold: 600;
+}
+
+@font-face {
+    font-family: 'Outfit-ext';
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+    src: url(/fonts/Outfit-Latin-Ext.woff2) format('woff2');
+    unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+    src: url(/fonts/Outfit-Latin.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+body {
+    font-family: var(--main-font);
+}
+
+h1 {
+    font-size: var(--font-size-h1);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height);
+    color: var(--secondary);
+}
+  
+h2 {
+    font-size: var(--font-size-h2);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height);
+    color: var(--secondary);
+}
+  
+h3 {
+    font-size: var(--font-size-h3);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height);
+    color: var(--secondary);
+}
+  
+h4 {
+    font-size: var(--font-size-h4);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height);
+    color: var(--primary);
+}
+  
+.normal-text {
+    font-size: var(--font-size-normal);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height);
+    color: var(--secondary);
+}
+  
+.small-text {
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height);
+    color: var(--secondary);
+}
+  
+.label-text {
+    font-size: var(--font-size-normal);
+    font-weight: var(--font-weight-semi-bold);
+    line-height: var(--line-height);
+    color: var(--secondary);
+}
