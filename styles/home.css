@@ -1,0 +1,15 @@
+main {
+    background-color: var(--background-gray);
+}
+
+.websitecard {
+    background-color: var(--background-white);
+}
+
+footer {
+    background-color: var(--background-white);
+}
+
+li {
+    list-style: none;
+}
