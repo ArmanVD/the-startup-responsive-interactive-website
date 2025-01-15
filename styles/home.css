@@ -15,7 +15,6 @@ main {
     background-color: var(--background-primary);
     width: 80vw;
     border-radius: 15px;
-    display: flex;
     padding: 1em;
     display: grid;
     grid-template-columns: 2fr 5fr 2fr;
@@ -26,7 +25,7 @@ main {
         width: 60px;
         border-radius: 9999px;
         margin-left: 0.5em;
-        margin-top: 0.5 em;
+        margin-top: 0.5em;
     }
 
     .cardinfo {
@@ -57,8 +56,6 @@ main {
 
     .meterwrapper {
         position: relative;
-        width: 100%;
-        height: 100%;
         display: grid;
         place-items: center;
     
@@ -67,38 +64,38 @@ main {
         }
     
         .percentage {
-            position: relative;
+            position: absolute;
             font-size: var(--font-size-normal);
             font-weight: var(--font-weight-bold);
             color: var(--secondary);
-            grid-area: 1 / 1;
-            z-index: 2;
             text-align: center;
         }
     }
     
-    .meterwrapper::before {
-        content: "";
-        width: 80px;
-        height: 80px;
-        background: conic-gradient(
-            var(--acccent-foreground) 0deg,
-            var(--acccent-foreground) calc(var(--progress-value) * 3.6deg),
-            var(--accent-background) calc(var(--progress-value) * 3.6deg),
-            var(--accent-background) 360deg);
-        border-radius: 50%;
-        grid-area: 1 / 1;
+    .progress-ring {
+        transform: rotate(-90deg);
     }
     
-    .meterwrapper::after {
-        content: "";
-        width: 60px;
-        height: 60px;
-        background: var(--background-primary);
-        border-radius: 50%;
-        grid-area: 1 / 1;
+    .progress-ring__background,
+    .progress-ring__circle {
+        fill: none;
+        stroke-width: 8;
+        cx: 40;
+        cy: 40;
+        r: 35;
     }
     
+    .progress-ring__background {
+        stroke: var(--accent-background);
+    }
+    
+    .progress-ring__circle {
+        stroke: var(--acccent-foreground);
+        stroke-linecap: round;
+        stroke-dasharray: 220;
+        stroke-dashoffset: 220;
+        transition: stroke-dashoffset 1s ease-out;
+    }
 }
 
 footer {
