@@ -22,3 +22,20 @@ cards.sort((a, b) => {
 });
 
 cards.forEach(card => container.appendChild(card));
+
+document.addEventListener("DOMContentLoaded", () => {
+    const meters = document.querySelectorAll("meter");
+
+    meters.forEach((meter) => {
+        const value = meter.value;
+        const max = meter.max;
+
+        const percentage = (value / max) * 100;
+
+        const wrapper = meter.closest(".meterwrapper");
+        wrapper.style.setProperty("--progress-value", percentage);
+
+        const percentageText = wrapper.querySelector(".percentage");
+        percentageText.textContent = `${Math.round(percentage)}%`;
+    });
+});
