@@ -1,5 +1,7 @@
 html {
     background-color: var(--background-secondary);
+    width: 100vw;
+    height: 100vh;
 }
 
 main {
