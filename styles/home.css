@@ -11,6 +11,11 @@ main {
     justify-items: center;
 }
 
+.inimessage {
+    width: 80vw;
+    padding: 1em;
+}
+
 .websitecard {
     background-color: var(--background-primary);
     width: 80vw;

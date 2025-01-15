@@ -91,3 +91,23 @@ document.addEventListener("DOMContentLoaded", () => {
         return 1 - Math.pow(1 - t, 3);
     }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const greetingElement = document.querySelector(".inimessage .small-text");
+
+    const getGreeting = () => {
+        const hours = new Date().getHours();
+        if (hours >= 6 && hours < 12) {
+            return "Good morning";
+        } else if (hours >= 12 && hours < 18) {
+            return "Good afternoon";
+        } else if (hours >= 18 && hours < 24) {
+            return "Good evening";
+        } else {
+            return "Good night";
+        }
+    };
+
+    const greeting = getGreeting();
+    greetingElement.textContent = `${greeting}, Arman`;
+});
