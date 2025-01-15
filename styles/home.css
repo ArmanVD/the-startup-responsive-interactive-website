@@ -13,7 +13,7 @@ main {
 
 .websitecard {
     background-color: var(--background-primary);
-    width: 90vw;
+    width: 80vw;
     border-radius: 15px;
     display: flex;
     padding: 1em;
