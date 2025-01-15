@@ -85,8 +85,7 @@ main {
             var(--acccent-foreground) 0deg,
             var(--acccent-foreground) calc(var(--progress-value) * 3.6deg),
             var(--accent-background) calc(var(--progress-value) * 3.6deg),
-            var(--accent-background) 360deg
-        );
+            var(--accent-background) 360deg);
         border-radius: 50%;
         grid-area: 1 / 1;
     }
