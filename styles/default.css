@@ -1,14 +1,14 @@
 :root {
 
-    --primary: #0275FF;
+    --primary: #025dcb;
     --secondary: #5D666A;
 
     --background-primary: #FFFFFF;
     --background-secondary: #F0F0F0;
 
-    --success:  #00C858;
+    --success:  #007b36;
     --success-light: #BBFFD8;
-    --info: #0275FF;
+    --info: #025dcb;
     --info-light: #CCE3FF;
     --warning: #FF9800;
     --warning-light: #FFFAF3;
