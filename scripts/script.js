@@ -98,13 +98,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const getGreeting = () => {
         const hours = new Date().getHours();
         if (hours >= 6 && hours < 12) {
-            return "Good morning";
+            return "Goedemorgen";
         } else if (hours >= 12 && hours < 18) {
-            return "Good afternoon";
+            return "Goedemiddag";
         } else if (hours >= 18 && hours < 24) {
-            return "Good evening";
+            return "Goedenavond";
         } else {
-            return "Good night";
+            return "Goedenacht";
         }
     };
 
