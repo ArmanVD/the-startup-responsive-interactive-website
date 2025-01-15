@@ -70,19 +70,24 @@ document.addEventListener("DOMContentLoaded", () => {
         const percentageText = wrapper.querySelector(".percentage");
         if (percentageText) {
             const animationStepTime = 25;
-            const totalSteps = animationDuration / animationStepTime;
-            const stepValue = value / totalSteps;
-            let currentValue = 0;
+            const totalSteps = Math.floor(animationDuration / animationStepTime);
+            let currentStep = 0;
 
             const interval = setInterval(() => {
-                currentValue += stepValue;
-                percentageText.textContent = `${Math.round(currentValue)}%`;
+                const easedPercentage = easeOutCubic(currentStep / totalSteps) * value;
+                percentageText.textContent = `${Math.round(easedPercentage)}%`;
 
-                if (currentValue >= value) {
+                currentStep++;
+
+                if (currentStep > totalSteps) {
                     clearInterval(interval);
                     percentageText.textContent = `${value}%`;
                 }
             }, animationStepTime);
         }
     });
+
+    function easeOutCubic(t) {
+        return 1 - Math.pow(1 - t, 3);
+    }
 });
