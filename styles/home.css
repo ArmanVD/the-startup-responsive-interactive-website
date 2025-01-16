@@ -1,5 +1,5 @@
 html {
-    background-color: var(--background-secondary);
+    background-color: light-dark(var(--background-primary-light), var(--background-primary-dark));
     width: 100vw;
     height: 100vh;
 }
@@ -17,7 +17,7 @@ main {
 }
 
 .websitecard {
-    background-color: var(--background-primary);
+    background-color: light-dark(var(--background-secondary-light), var(--background-secondary-dark));
     width: 80vw;
     border-radius: 15px;
     padding: 1em;
@@ -70,9 +70,6 @@ main {
     
         .percentage {
             position: absolute;
-            font-size: var(--font-size-normal);
-            font-weight: var(--font-weight-bold);
-            color: var(--secondary);
             text-align: center;
         }
     }
@@ -104,7 +101,7 @@ main {
 }
 
 footer {
-    background-color: var(--background-primary);
+    background-color: light-dark(var(--background-secondary-light), var(--background-secondary-dark));
 }
 
 li {
