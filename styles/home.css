@@ -100,11 +100,10 @@ main {
     }
 }
 
-footer {
-    background-color: light-dark(var(--background-secondary-light), var(--background-secondary-dark));
-}
-
 li {
     list-style: none;
 }
 
+footer {
+    background-color: light-dark(var(--background-secondary-light), var(--background-secondary-dark));
+}
