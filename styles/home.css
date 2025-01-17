@@ -103,6 +103,7 @@ header {
         left: 0;
         width: 100%;
         height: 100vh;
+        height: 100dvh;
         background-color: light-dark(var(--background-secondary-light), var(--background-secondary-dark));
         padding: 7em 2em 2em 2em;
         box-sizing: border-box;
@@ -182,7 +183,11 @@ main {
 
 .inimessage {
     width: 90%;
-    padding: 1em;
+    padding: 1em 1em 0 1em;
+
+    p {
+        margin-bottom: 0;
+    }
 }
 
 .websitecard {
