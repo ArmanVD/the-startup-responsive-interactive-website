@@ -181,15 +181,13 @@ main {
 }
 
 .inimessage {
-    width: 80%;
+    width: 90%;
     padding: 1em;
-    max-width: 600px;
 }
 
 .websitecard {
     background-color: light-dark(var(--background-secondary-light), var(--background-secondary-dark));
-    width: 80%;
-    max-width: 600px;
+    width: 90%;
     border-radius: 15px;
     padding: 1em;
     display: grid;
