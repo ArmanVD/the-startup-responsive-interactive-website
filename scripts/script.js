@@ -8,10 +8,6 @@ menuToggle.addEventListener("click", () => {
     navMenu.classList.toggle("visible");
     logo.classList.toggle("centered");
 
-    if (navMenu.classList.contains("visible")) {
-        navMenu.style.transition = "transform 0.5s ease-in-out, opacity 0.5s ease-in-out";
-    }
-
     dropdownHeaders.forEach(header => {
         header.classList.toggle("visible", navMenu.classList.contains("visible"));
     });

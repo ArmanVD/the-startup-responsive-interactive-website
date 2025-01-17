@@ -4,6 +4,14 @@ html {
     height: 100%;
 }
 
+body {
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
 header {
     display: flex;
     justify-content: space-between;
@@ -13,22 +21,24 @@ header {
     position: relative;
     z-index: 10;
     border-radius: 15px;
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 5%;
+}
 
     .logo {
-
+        transition: all 0.45s ease-in-out;
         z-index: 15;
 
         a img {
             display: block;
             max-height: 40px;
             width: auto;
-            transition: transform 0.5s ease-in-out;
+           
         }
 
         &.centered {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
+            transform: translateX(calc(40vw - 50%));
         }
     }
 
@@ -50,7 +60,7 @@ header {
             display: block;
             height: 3px;
             width: 100%;
-            background-color: currentColor;
+            background-color: light-dark(var(--text-light), var(--text-dark));
             border-radius: 2px;
             position: absolute;
             left: 0;
@@ -85,41 +95,35 @@ header {
     }
 
     nav {
-        display: none;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5em;
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
         height: 100vh;
         background-color: light-dark(var(--background-secondary-light), var(--background-secondary-dark));
-        padding: 2em;
+        padding: 7em 2em 2em 2em;
         box-sizing: border-box;
-        opacity: 0;
-        transform: translateY(-100%);
-        transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+        transition: clip-path .45s cubic-bezier(0.33, 1, 0.68, 1);
+        clip-path: polygon(6% 6%, 94% 6%, 94% 6%, 6% 6%);
+        pointer-events: none;
 
         &.visible {
-            display: flex;
-            flex-direction: column;
-            gap: -3em;
-            opacity: 1;
-            transform: translateY(0);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+            pointer-events: auto;
         }
 
         section {
             width: 100%;
-            margin-top: 5em;
 
             h2 {
+                display: flex;
                 cursor: pointer;
-                display: none;
                 align-items: center;
                 justify-content: space-between;
-                margin: 0;
-
-                &.visible {
-                    display: flex;
-                }
+                margin-bottom: 0.5em;
 
                 &::after {
                     content: "▼";
@@ -150,23 +154,30 @@ header {
             }
         }
 
-        .useractions ul {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5em;
+        .useractions {
 
-            li {
-                padding: 0.5em 0;
+            margin-top: auto;
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                gap: 0.5em;
+            
+
+                li {
+                    padding: 0.5em 0;
+                }
             }
         }
     }
-}
+
 
 main {
     display: grid;
     grid-template-columns: 1fr;
     gap: 20px;
     justify-items: center;
+    padding-bottom: 20px;
 }
 
 .inimessage {
