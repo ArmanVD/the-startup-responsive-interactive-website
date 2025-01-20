@@ -326,6 +326,7 @@ li {
     main {
         height: fit-content;
         justify-items: left;
+        padding-bottom: 0;
 
         .websitecard {
             width: 500px;
