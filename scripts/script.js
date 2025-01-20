@@ -15,6 +15,8 @@ menuToggle.addEventListener("click", () => {
 });
 
 dropdownHeaders.forEach(header => {
+    let rotationAngle = 0;
+
     header.addEventListener("click", () => {
         header.classList.toggle("open");
 
@@ -22,6 +24,10 @@ dropdownHeaders.forEach(header => {
         if (submenu) {
             submenu.classList.toggle("visible");
         }
+
+        rotationAngle += 180;
+
+        header.style.setProperty("--rotation", `${rotationAngle}deg`);
     });
 });
 
