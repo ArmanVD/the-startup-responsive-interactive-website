@@ -4,7 +4,8 @@ const logo = document.querySelector(".logo");
 const dropdownHeaders = document.querySelectorAll("nav section h2");
 
 menuToggle.addEventListener("click", () => {
-    menuToggle.classList.toggle("open");
+    const isOpened = menuToggle.classList.toggle("opened");
+    menuToggle.setAttribute("aria-expanded", isOpened);
     navMenu.classList.toggle("visible");
     logo.classList.toggle("centered");
 
