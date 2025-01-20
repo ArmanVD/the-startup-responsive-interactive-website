@@ -29,7 +29,6 @@ header {
     width: 90%;
     margin-left: 5%;
     margin-top: 5%;
-}
 
     .logo {
         transition: all 0.45s ease-in-out;
@@ -105,7 +104,6 @@ header {
             }
         }
     }
-
     
     nav {
         display: flex;
@@ -183,7 +181,7 @@ header {
             }
         }
     }
-
+}
 
 main {
     display: grid;
@@ -261,6 +259,8 @@ main {
 
     .progress-ring {
         transform: rotate(-90deg);
+        height: 85%;
+        width: 85%;
     }
 
     .progress-ring__background,
@@ -287,4 +287,57 @@ main {
 
 li {
     list-style: none;
+}
+
+@media (min-width: 768px) {
+    body {
+        display: grid;
+        grid-template-columns: 2fr 5fr;
+        grid-template-rows: auto;
+        grid-gap: 2em;
+    }
+
+    header {
+        grid-column: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 2em;
+        height: 100vh;
+        border-radius: 0;
+        margin: 0;
+        width: 100%;
+
+        button {
+            visibility: hidden;
+        }
+
+        nav {
+            position: relative;
+            width: 100%;
+            height: auto;
+            clip-path: none;
+            pointer-events: auto;
+            gap: 2em;
+            padding: 0;
+        }
+    }
+
+    main {
+        height: fit-content;
+        justify-items: left;
+
+        .websitecard {
+            width: 500px;
+            max-height: 168px;
+
+            .progress-ring {
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px) {
 }
