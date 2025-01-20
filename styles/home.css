@@ -88,7 +88,7 @@ header {
         }
         
         &.opened {
-            
+
             .line1 {
                 stroke-dasharray: 90 207;
                 stroke-dashoffset: -134;
@@ -141,7 +141,7 @@ header {
                 margin-bottom: 0.5em;
 
                 &::after {
-                    content: url(../assets/Chevron.png);
+                    content: url(../assets/chevron.svg);
                     margin-left: 0.5em;
                     transition: transform 0.3s ease-in-out;
                 }
