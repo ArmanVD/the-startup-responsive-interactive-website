@@ -342,4 +342,18 @@ li {
 }
 
 @media (min-width: 1024px) {
+    main {
+        grid-template-columns: 1fr 1fr;
+        padding-right: 2em;
+        max-width: 900px;
+
+        .inimessage {
+            grid-column: 1 / -1;
+        }
+
+        .websitecard {
+            width: auto;
+            max-width: 420px;
+        }
+    }
 }
