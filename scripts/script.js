@@ -138,3 +138,12 @@ meters.forEach(wrapper => {
     wrapper.insertBefore(svg, wrapper.firstChild);
     animatePercentageText(wrapper, value, (percentage / 100) * 2000);
 });
+
+cards.forEach(card => {
+    card.addEventListener("click", () => {
+        const link = card.querySelector(".cardinfo a");
+        if (link) {
+            link.click();
+        }
+    });
+});
