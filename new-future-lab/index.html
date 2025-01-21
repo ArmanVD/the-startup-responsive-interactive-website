@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../styles/page.css">
     <link rel="icon" href="../assets/favicon.png" type="image/x-icon">
     <link rel="preload" href="../fonts/Outfit-Latin.woff2" as="font" type="font/woff2" crossorigin>
-    <script src="../scripts/page.js" type="module"></script>
+    <script src="../scripts/script.js" type="module"></script>
   </head>
   <body>
     <header>
@@ -93,8 +93,28 @@
             <p class="small-text">Hallo Arman</p>
             <H1 class="style1">New Future Lab</H1>
         </article>
-        <article class="toegankelijkheid">
-            
+        <article class="toegankelijkheid state-info" aria-labelledby="toegankelijkheid">
+            <h2>Toegankelijkheid</h2>
+            <div class="meterwrapper">
+                <meter id="toegankelijkheid1" max="100" value="57"></meter>
+                <span class="percentage"></span>
+            </div>
+            <article>
+                <p> <img src="../assets/check.svg" alt=""> Niveau A</p>
+                <p> <img src="../assets/check.svg" alt=""> Niveau AA</p>
+                <p> <img src="../assets/check.svg" alt=""> Niveau AAA</p>
+            </article>
+        </article>
+        <article class="automatischescan state-warning" aria-labelledby="automatische scan">
+            <h2>Automatische scan</h2>
+            <div class="meterwrapper">
+                <meter id="toegankelijkheid2" max="100" value="54"></meter>
+                <span class="percentage"></span>
+            </div>
+            <label class="label-text" for="toegankelijkheid2">
+                <img src="../assets/exclamation.svg" alt="" width="23" height="23">
+                3 nieuwe fouten ontdekt
+            </label>
         </article>
     </main>    
   </body>

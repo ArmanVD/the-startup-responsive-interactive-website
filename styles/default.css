@@ -354,6 +354,48 @@ main {
     }
 }
 
+.meterwrapper {
+    position: relative;
+    display: grid;
+    place-items: center;
+
+    meter {
+        display: none;
+    }
+
+    .percentage {
+        position: absolute;
+        text-align: center;
+    }
+}
+
+.progress-ring {
+    transform: rotate(-90deg);
+    height: 100%;
+    width: 100%;
+}
+
+.progress-ring__background,
+.progress-ring__circle {
+    fill: none;
+    stroke-width: 8;
+    cx: 40;
+    cy: 40;
+    r: 35;
+}
+
+.progress-ring__background {
+    stroke: var(--accent-background);
+}
+
+.progress-ring__circle {
+    stroke: var(--acccent-foreground);
+    stroke-linecap: round;
+    stroke-dasharray: 220;
+    stroke-dashoffset: 220;
+    transition: stroke-dashoffset 1s ease-out;
+}
+
 @media (min-width: 768px) {
 
     header {

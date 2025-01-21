@@ -1,0 +1,38 @@
+.toegankelijkheid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+    background-color: light-dark(var(--background-secondary-light), var(--background-secondary-dark));
+    position: relative;
+    border-radius: 15px;
+    padding: 1em;
+
+    h2 {
+        grid-column: 1 / -1;
+    }
+}
+
+.automatischescan {
+
+    label {
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        width: fit-content;
+        padding: 5px 10px;
+        gap: 0.25em;
+        margin-top: 0.5em;
+        cursor: pointer;
+
+        img {
+            height: 23px;
+            width: 23px;
+            margin: 0;
+        }
+    }
+
+    .label-text {
+        background-color: var(--accent-background);
+        color: var(--acccent-foreground);
+    }
+}
