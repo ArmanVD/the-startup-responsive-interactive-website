@@ -94,27 +94,70 @@
             <H1 class="style1">New Future Lab</H1>
         </article>
         <article class="toegankelijkheid state-info" aria-labelledby="toegankelijkheid">
-            <h2>Toegankelijkheid</h2>
+            <h2 class="style2">Toegankelijkheid</h2>
             <div class="meterwrapper">
                 <meter id="toegankelijkheid1" max="100" value="57"></meter>
                 <span class="percentage"></span>
             </div>
-            <article>
+            <article class="niveau">
                 <p> <img src="../assets/check.svg" alt=""> Niveau A</p>
                 <p> <img src="../assets/check.svg" alt=""> Niveau AA</p>
                 <p> <img src="../assets/check.svg" alt=""> Niveau AAA</p>
             </article>
         </article>
         <article class="automatischescan state-warning" aria-labelledby="automatische scan">
-            <h2>Automatische scan</h2>
+            <h2 class="style2">Automatische scan</h2>
+            <div class="scandate">
+                <h3 class="normal-text">laatste scan</h3>
+                <p class="small-text">23/4/2024</p>
+            </div>
             <div class="meterwrapper">
                 <meter id="toegankelijkheid2" max="100" value="54"></meter>
                 <span class="percentage"></span>
             </div>
-            <label class="label-text" for="toegankelijkheid2">
-                <img src="../assets/exclamation.svg" alt="" width="23" height="23">
-                3 nieuwe fouten ontdekt
-            </label>
+            <div class="fouten">
+                <label class="label-text" for="toegankelijkheid2">
+                    <img src="../assets/exclamation.svg" alt="" width="23" height="23">
+                    3 nieuwe fouten ontdekt
+                </label>
+                <p class="small-text">
+                    *Dit is een schatting gegenereerd door een automatische scan. Test altijd handmatig voor een volledig beeld.
+                </p>
+            </div>
+            <div class="aandacht">
+                <h3 class="normal-text">Aandacht vereist</h3>
+                <p class="small-text"> <img src="../assets/arrow.svg" alt=""> over ons</p>
+                <p class="small-text"> <img src="../assets/arrow.svg" alt=""> over ons</p>
+                <p class="small-text"> <img src="../assets/arrow.svg" alt=""> over ons</p>
+                <p class="small-text"> <img src="../assets/arrow.svg" alt=""> over ons</p>
+                <p class="small-text"> <img src="../assets/arrow.svg" alt=""> over ons</p>
+                <p class="small-text"> <img src="../assets/arrow.svg" alt=""> over ons</p>
+                <p class="small-text"> <img src="../assets/arrow.svg" alt=""> over ons</p>
+                <p class="small-text"> <img src="../assets/arrow.svg" alt=""> over ons</p>
+                <p class="small-text"> <img src="../assets/arrow.svg" alt=""> over ons</p>
+            </div>
+        </article>
+        <article class="pf">
+            <div class="zoeken">
+                <h2 class="user-text">Pagina zoeken</h2>
+                <div class="zoek-container">
+                  <img src="../assets/search.svg" alt="Search Icon">
+                  <input type="text" placeholder="Zoeken...">
+                </div>
+            </div>
+            <div class="filters">
+                <h2 class="user-text">Filters</h2>
+                <div class="filter-buttons">
+                  <button class="filter-button small-text">voldoet niet (14)</button>
+                  <button class="filter-button small-text">voldoet (6)</button>
+                  <button class="filter-button small-text">A (25)</button>
+                  <button class="filter-button small-text">AA (13)</button>
+                  <button class="filter-button small-text">AAA (12)</button>
+                </div>
+            </div>
+            <div class="toevoegen">
+                <button class="small-text">+ pagina toevoegen</button>
+            </div>
         </article>
     </main>    
   </body>

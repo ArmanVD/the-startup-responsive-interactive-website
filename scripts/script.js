@@ -147,3 +147,11 @@ cards.forEach(card => {
         }
     });
 });
+
+const filterButtons = document.querySelectorAll(".filter-button");
+
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      button.classList.toggle("active");
+    });
+  });
