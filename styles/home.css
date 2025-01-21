@@ -203,6 +203,7 @@ main {
 .websitecard {
     background-color: light-dark(var(--background-secondary-light), var(--background-secondary-dark));
     width: 90%;
+    height: auto;
     border-radius: 15px;
     padding: 1em;
     display: grid;
@@ -259,8 +260,8 @@ main {
 
     .progress-ring {
         transform: rotate(-90deg);
-        height: 85%;
-        width: 85%;
+        height: 100%;
+        width: 100%;
     }
 
     .progress-ring__background,
@@ -292,21 +293,23 @@ li {
 @media (min-width: 768px) {
     body {
         display: grid;
-        grid-template-columns: 2fr 5fr;
+        grid-template-columns: 1fr 5fr;
         grid-template-rows: auto;
         grid-gap: 2em;
+        overflow: visible;
     }
 
     header {
+        position: sticky;
         grid-column: 1;
-        display: flex;
         flex-direction: column;
-        justify-content: flex-start;
         padding: 2em;
         height: 100vh;
         border-radius: 0;
         margin: 0;
         width: 100%;
+        top: 0;
+        left: 0;
 
         button {
             visibility: hidden;
@@ -314,12 +317,10 @@ li {
 
         nav {
             position: relative;
-            width: 100%;
-            height: auto;
             clip-path: none;
             pointer-events: auto;
-            gap: 2em;
             padding: 0;
+
         }
     }
 
