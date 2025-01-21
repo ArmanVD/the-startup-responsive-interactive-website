@@ -1,39 +1,3 @@
-html {
-    background-color: light-dark(var(--background-primary-light), var(--background-primary-dark));
-    width: 100%;
-    height: 100%;
-}
-
-body {
-    margin: 0;
-}
-
-body:has(nav.visible) {
-    overflow: hidden;
-}
-
-
-* {
-    box-sizing: border-box;
-}
-
-main {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-    justify-items: center;
-    padding-bottom: 20px;
-}
-
-.inimessage {
-    width: 90%;
-    padding: 1em 1em 0 1em;
-
-    p {
-        margin-bottom: 0;
-    }
-}
-
 .websitecard {
     position: relative;
     background-color: light-dark(var(--background-secondary-light), var(--background-secondary-dark));
@@ -128,18 +92,8 @@ li {
 }
 
 @media (min-width: 768px) {
-    body {
-        display: grid;
-        grid-template-columns: 1fr 5fr;
-        grid-template-rows: auto;
-        grid-gap: 2em;
-        overflow: visible;
-    }
 
     main {
-        height: fit-content;
-        justify-items: left;
-        padding-bottom: 0;
 
         .websitecard {
             width: 500px;
@@ -155,14 +109,7 @@ li {
 
 @media (min-width: 1024px) {
     main {
-        grid-template-columns: 1fr 1fr;
-        padding-right: 2em;
-        max-width: 900px;
-
-        .inimessage {
-            grid-column: 1 / -1;
-        }
-
+       
         .websitecard {
             width: auto;
             max-width: 420px;
