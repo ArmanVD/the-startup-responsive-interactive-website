@@ -150,8 +150,7 @@ article {
         .filter-buttons {
             display: flex;
             gap: 10px;
-            width: 100%;
-            overflow: hidden;
+            width: 90%;
 
             button {
                 background-color: var(--info-light);
