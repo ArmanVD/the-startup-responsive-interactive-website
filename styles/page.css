@@ -274,3 +274,86 @@ article {
         gap: 1em;
     }
 }
+
+@media (min-width: 768px) {
+    main {
+        grid-template-columns: 1fr 1fr;
+        padding-right: 2em;
+        max-width: 1200px;
+    }
+
+    .inimessage {
+        grid-column: 1 / -1;
+    }
+
+    .toegankelijkheid {
+        height: fit-content;
+    }
+
+    .pf {
+        grid-column: 1 / -1;
+
+        .filters {
+
+            .filter-buttons {
+                
+                button {
+                    padding: 1px 6px;
+                }
+            }
+        }
+    }
+
+    article {
+        width: 100%;
+    }
+}
+
+@media (min-width: 1024px) {
+    main {
+        grid-template-columns: 1fr 1fr 1fr;
+        padding-right: 2em;
+    }
+
+    .automatischescan {
+        grid-column: 2 / -1;
+    
+        .meterwrapper {
+            grid-column: 1 / 2;
+        }
+    
+        .fouten {
+            grid-column: 2 / 5;
+        }
+    
+        .aandacht {
+            grid-column: 5 / 7;
+        }
+    }
+
+    .toegankelijkheid {
+        height: auto;
+    }
+
+    .pf {
+        display: flex;
+        flex-direction: row;
+        align-items: end;
+        position: relative;
+        background-color: transparent;
+
+        .zoeken {
+            
+            h2 {
+                position: absolute;
+                top: 1em;
+            }
+        }
+
+        .zoek-container {
+            background-color: light-dark(var(--background-secondary-light), var(--background-secondary-dark));;
+        }
+        
+    }
+
+}
