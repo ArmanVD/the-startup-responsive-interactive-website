@@ -103,7 +103,7 @@ const createProgressRing = (percentage, baseAnimationSpeed = 2000) => {
     return { svg, progressCircle };
 };
 
-const animatePercentageText = (wrapper, value, animationDuration) => {
+const animateCircularPercentageText = (wrapper, value, animationDuration) => {
     const percentageText = wrapper.querySelector(".percentage");
     if (!percentageText) return;
 
@@ -136,7 +136,63 @@ meters.forEach(wrapper => {
 
     const { svg } = createProgressRing(percentage);
     wrapper.insertBefore(svg, wrapper.firstChild);
-    animatePercentageText(wrapper, value, (percentage / 100) * 2000);
+    animateCircularPercentageText(wrapper, value, (percentage / 100) * 2000);
+});
+
+const createHorizontalMeter = (percentage, baseAnimationSpeed = 2000) => {
+    const meterWrapper = document.createElement("div");
+    meterWrapper.classList.add("horizontal-meter-bar");
+
+    const backgroundBar = document.createElement("div");
+    backgroundBar.classList.add("horizontal-meter-background");
+    meterWrapper.appendChild(backgroundBar);
+
+    const progressBar = document.createElement("div");
+    progressBar.classList.add("horizontal-meter-progress");
+    progressBar.style.width = `0%`;
+    backgroundBar.appendChild(progressBar);
+
+    const animationDuration = (percentage / 100) * baseAnimationSpeed;
+
+    setTimeout(() => {
+        progressBar.style.transition = `width ${animationDuration}ms ease-out`;
+        progressBar.style.width = `${percentage}%`;
+    }, 100);
+
+    return { meterWrapper, progressBar };
+};
+
+const animateHorizontalPercentageText = (wrapper, value, baseAnimationSpeed = 2000) => {
+    const percentageText = wrapper.querySelector(".percentage");
+    if (!percentageText) return;
+
+    const animationDuration = (value / 100) * baseAnimationSpeed;
+    const animationStepTime = 25;
+    const totalSteps = Math.floor(animationDuration / animationStepTime);
+    let currentStep = 0;
+
+    const interval = setInterval(() => {
+        const easedPercentage = easeOutCubic(currentStep / totalSteps) * value;
+        percentageText.textContent = `${Math.round(easedPercentage)}%`;
+
+        currentStep++;
+        if (currentStep > totalSteps) {
+            clearInterval(interval);
+            percentageText.textContent = `${value}%`;
+        }
+    }, animationStepTime);
+};
+
+const horizontalMeters = document.querySelectorAll(".horizontal-meter");
+horizontalMeters.forEach(wrapper => {
+    const meter = wrapper.querySelector("meter");
+    const value = meter?.value || 0;
+    const max = meter?.max || 100;
+    const percentage = Math.min(Math.max((value / max) * 100, 0), 100);
+
+    const { meterWrapper } = createHorizontalMeter(percentage, 2000);
+    wrapper.insertBefore(meterWrapper, meter);
+    animateHorizontalPercentageText(wrapper, percentage, 2000);
 });
 
 cards.forEach(card => {
@@ -150,8 +206,8 @@ cards.forEach(card => {
 
 const filterButtons = document.querySelectorAll(".filter-button");
 
-  filterButtons.forEach((button) => {
+filterButtons.forEach((button) => {
     button.addEventListener("click", () => {
-      button.classList.toggle("active");
+        button.classList.toggle("active");
     });
-  });
+});
