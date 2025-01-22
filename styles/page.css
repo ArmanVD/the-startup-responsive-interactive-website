@@ -5,6 +5,10 @@ article {
     border-radius: 15px;
 }
 
+.inimessage {
+    background-color: transparent;
+}
+
 .toegankelijkheid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -20,6 +24,7 @@ article {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        width: 100%;
         
         p{
             margin: .5em;
