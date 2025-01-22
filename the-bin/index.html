@@ -8,8 +8,396 @@
     <title>AccessDash</title>
     <link rel="stylesheet" href="../styles/default.css">
     <link rel="stylesheet" href="../styles/page.css">
-    <link rel="icon" href="./assets/favicon.png" type="image/x-icon">
+    <link rel="icon" href="../assets/favicon.png" type="image/x-icon">
     <link rel="preload" href="../fonts/Outfit-Latin.woff2" as="font" type="font/woff2" crossorigin>
-    <script src="../scripts/page.js" type="module"></script>
+    <script src="../scripts/script.js" type="module"></script>
   </head>
+  <body>
+    <header>
+        <div class="logo">
+            <a href="../">
+                <img src="../assets/Logo.svg" alt="AccessDash Logo" width="145" height="29">
+            </a>
+        </div>
+        <button class="menu-toggle" aria-expanded="false" aria-label="Toggle navigation">
+            <svg width="30" height="30" viewBox="0 0 100 100">
+              <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+              <path class="line line2" d="M 20,50 H 80" />
+              <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+            </svg>
+        </button>          
+        <nav>
+            <section class="dashboard">
+                <h2 class="style4">Dashboard</h2>
+                <ul>
+                    <li><a href="../" class="normal-text">Dashboard</a></li>
+                    <li><a href="../" class="normal-text">Info</a></li>
+                    <li><a href="../" class="normal-text">Voortgang</a></li>
+                    <li><a href="../" class="normal-text">Scan</a></li>
+                </ul>
+            </section>
+            <section class="sitesdashboard" aria-labelledby="new-future-lab">
+                <h2 id="new-future-lab" class="style4">New Future Lab</h2>
+                <ul>
+                    <li><a href="../new-future-lab/" class="normal-text">Home</a></li>
+                    <li><a href="../new-future-lab/" class="normal-text">Over ons</a></li>
+                    <li><a href="../new-future-lab/" class="normal-text">Contact</a></li>
+                    <li><a href="../new-future-lab/" class="normal-text">Missie</a></li>
+                    <li><a href="../new-future-lab/" class="normal-text">Blog</a></li>
+                    <li><a href="../new-future-lab/" class="normal-text">Blog Detail</a></li>
+                </ul>
+            </section>
+            <section class="sitesdashboard" aria-labelledby="shot-of-culture">
+                <h2 id="shot-of-culture" class="style4">Shot of Culture</h2>
+                <ul>
+                    <li><a href="../shot-of-culture/" class="normal-text">Home</a></li>
+                    <li><a href="../shot-of-culture/" class="normal-text">Over ons</a></li>
+                    <li><a href="../shot-of-culture/" class="normal-text">Contact</a></li>
+                    <li><a href="../shot-of-culture/" class="normal-text">Missie</a></li>
+                    <li><a href="../shot-of-culture/" class="normal-text">Blog</a></li>
+                    <li><a href="../shot-of-culture/" class="normal-text">Blog Detail</a></li>
+                </ul>
+            </section>
+            <section class="sitesdashboard" aria-labelledby="nieuwekijk">
+                <h2 id="nieuwekijk" class="style4">Nieuwekijk</h2>
+                <ul>
+                    <li><a href="../nieuwekijk/" class="normal-text">Home</a></li>
+                    <li><a href="../nieuwekijk/" class="normal-text">Over ons</a></li>
+                    <li><a href="../nieuwekijk/" class="normal-text">Contact</a></li>
+                    <li><a href="../nieuwekijk/" class="normal-text">Missie</a></li>
+                    <li><a href="../nieuwekijk/" class="normal-text">Blog</a></li>
+                    <li><a href="../nieuwekijk/" class="normal-text">Blog Detail</a></li>
+                </ul>
+            </section>
+            <section class="sitesdashboard" aria-labelledby="the-bin">
+                <h2 id="the-bin" class="style4">The Bin</h2>
+                <ul>
+                    <li><a href="../the-bin/" class="normal-text">Home</a></li>
+                    <li><a href="../the-bin/" class="normal-text">Over ons</a></li>
+                    <li><a href="../the-bin/" class="normal-text">Contact</a></li>
+                    <li><a href="../the-bin/" class="normal-text">Missie</a></li>
+                    <li><a href="../the-bin/" class="normal-text">Blog</a></li>
+                    <li><a href="../the-bin/" class="normal-text">Blog Detail</a></li>
+                </ul>
+            </section>
+            <section class="useractions">
+                <ul>
+                    <li><a href="#instellingen" class="user-text">Instellingen</a></li>
+                    <li><a href="#account" class="user-text">Account</a></li>
+                </ul>
+            </section>
+        </nav>
+    </header>
+    <main>
+        <article class="inimessage">
+            <p class="small-text">Hallo Arman</p>
+            <H1 class="style1">The Bin</H1>
+        </article>
+        <article class="toegankelijkheid state-success" aria-labelledby="toegankelijkheid">
+            <h2 class="style2">Toegankelijkheid</h2>
+            <div class="meterwrapper">
+                <meter id="toegankelijkheid1" max="100" value="100"></meter>
+                <span class="percentage"></span>
+            </div>
+            <article class="niveau">
+                <p class="normal-text"> <img src="../assets/check.svg" alt=""> Niveau A</p>
+                <p class="normal-text"> <img src="../assets/check.svg" alt=""> Niveau AA</p>
+                <p class="normal-text"> <img src="../assets/check.svg" alt=""> Niveau AAA</p>
+            </article>
+        </article>
+        <article class="automatischescan state-success" aria-labelledby="automatische scan">
+            <h2 class="style2">Automatische scan</h2>
+            <div class="scandate">
+                <h3 class="normal-text">laatste scan</h3>
+                <p class="small-text">23/4/2024</p>
+            </div>
+            <div class="meterwrapper">
+                <meter id="toegankelijkheid2" max="100" value="100"></meter>
+                <span class="percentage"></span>
+            </div>
+            <div class="fouten">
+                <label class="label-text" for="toegankelijkheid2">
+                    geen nieuwe fouten ontdekt
+                </label>
+                <p class="small-text">
+                    *Dit is een schatting gegenereerd door een automatische scan. Test altijd handmatig voor een volledig beeld.
+                </p>
+            </div>
+        </article>
+        <article class="pf">
+            <div class="zoeken">
+                <h2 class="user-text">Pagina zoeken</h2>
+                <div class="zoek-container">
+                  <img src="../assets/search.svg" alt="Search Icon">
+                  <input type="text" placeholder="Zoeken..." id="search">
+                </div>
+            </div>
+            <div class="filters">
+                <h2 class="user-text">Filters</h2>
+                <div class="filter-buttons">
+                  <button class="filter-button small-text">voldoet niet (14)</button>
+                  <button class="filter-button small-text">voldoet (6)</button>
+                  <button class="filter-button small-text">A (25)</button>
+                  <button class="filter-button small-text">AA (13)</button>
+                  <button class="filter-button small-text">AAA (12)</button>
+                </div>
+            </div>
+            <div class="toevoegen">
+                <button class="small-text">+ pagina toevoegen</button>
+            </div>
+        </article>
+        <article class="informationcards state-success">
+            <div class="infocard">
+                <h2 class="style2">Over ons</h2>
+                <p class="normal-text">thebin.nl/over-ons</p>
+            </div>
+            <div class="horizontal-meter">
+                <meter max="100" value="100"></meter>
+                <span class="percentage"></span>
+            </div>
+            <div class="welkniveau">
+                <p class="normal-text"> <img src="../assets/check.svg" alt=""> Niveau A</p>
+                <p class="normal-text"> <img src="../assets/check.svg" alt=""> Niveau AA</p>
+            </div>
+        </article>
+        <article class="informationcards state-success">
+            <div class="infocard">
+                <h2 class="style2">Over ons</h2>
+                <p class="normal-text">thebin.nl/over-ons</p>
+            </div>
+            <div class="horizontal-meter">
+                <meter max="100" value="100"></meter>
+                <span class="percentage"></span>
+            </div>
+            <div class="welkniveau">
+                <p class="normal-text"> <img src="../assets/check.svg" alt=""> Niveau A</p>
+                <p class="normal-text"> <img src="../assets/check.svg" alt=""> Niveau AA</p>
+            </div>
+        </article>
+        <article class="informationcards state-success">
+            <div class="infocard">
+                <h2 class="style2">Over ons</h2>
+                <p class="normal-text">thebin.nl/over-ons</p>
+            </div>
+            <div class="horizontal-meter">
+                <meter max="100" value="100"></meter>
+                <span class="percentage"></span>
+            </div>
+            <div class="welkniveau">
+                <p class="normal-text"> <img src="../assets/check.svg" alt=""> Niveau A</p>
+                <p class="normal-text"> <img src="../assets/check.svg" alt=""> Niveau AA</p>
+            </div>
+        </article>
+        <article class="informationcards state-success">
+            <div class="infocard">
+                <h2 class="style2">Over ons</h2>
+                <p class="normal-text">thebin.nl/over-ons</p>
+            </div>
+            <div class="horizontal-meter">
+                <meter max="100" value="100"></meter>
+                <span class="percentage"></span>
+            </div>
+            <div class="welkniveau">
+                <p class="normal-text"> <img src="../assets/check.svg" alt=""> Niveau A</p>
+                <p class="normal-text"> <img src="../assets/check.svg" alt=""> Niveau AA</p>
+            </div>
+        </article>
+        <article class="informationcards state-success">
+            <div class="infocard">
+                <h2 class="style2">Over ons</h2>
+                <p class="normal-text">thebin.nl/over-ons</p>
+            </div>
+            <div class="horizontal-meter">
+                <meter max="100" value="100"></meter>
+                <span class="percentage"></span>
+            </div>
+            <div class="welkniveau">
+                <p class="normal-text"> <img src="../assets/check.svg" alt=""> Niveau A</p>
+                <p class="normal-text"> <img src="../assets/check.svg" alt=""> Niveau AA</p>
+            </div>
+        </article>
+        <article class="informationcards state-success">
+            <div class="infocard">
+                <h2 class="style2">Over ons</h2>
+                <p class="normal-text">thebin.nl/over-ons</p>
+            </div>
+            <div class="horizontal-meter">
+                <meter max="100" value="100"></meter>
+                <span class="percentage"></span>
+            </div>
+            <div class="welkniveau">
+                <p class="normal-text"> <img src="../assets/check.svg" alt=""> Niveau A</p>
+                <p class="normal-text"> <img src="../assets/check.svg" alt=""> Niveau AA</p>
+            </div>
+        </article>
+        <article class="informationcards state-success">
+            <div class="infocard">
+                <h2 class="style2">Over ons</h2>
+                <p class="normal-text">thebin.nl/over-ons</p>
+            </div>
+            <div class="horizontal-meter">
+                <meter max="100" value="100"></meter>
+                <span class="percentage"></span>
+            </div>
+            <div class="welkniveau">
+                <p class="normal-text"> <img src="../assets/check.svg" alt=""> Niveau A</p>
+                <p class="normal-text"> <img src="../assets/check.svg" alt=""> Niveau AA</p>
+            </div>
+        </article>
+        <article class="informationcards state-success">
+            <div class="infocard">
+                <h2 class="style2">Over ons</h2>
+                <p class="normal-text">thebin.nl/over-ons</p>
+            </div>
+            <div class="horizontal-meter">
+                <meter max="100" value="100"></meter>
+                <span class="percentage"></span>
+            </div>
+            <div class="welkniveau">
+                <p class="normal-text"> <img src="../assets/check.svg" alt=""> Niveau A</p>
+                <p class="normal-text"> <img src="../assets/check.svg" alt=""> Niveau AA</p>
+            </div>
+        </article>
+        <article class="informationcards state-success">
+            <div class="infocard">
+                <h2 class="style2">Over ons</h2>
+                <p class="normal-text">thebin.nl/over-ons</p>
+            </div>
+            <div class="horizontal-meter">
+                <meter max="100" value="100"></meter>
+                <span class="percentage"></span>
+            </div>
+            <div class="welkniveau">
+                <p class="normal-text"> <img src="../assets/check.svg" alt=""> Niveau A</p>
+                <p class="normal-text"> <img src="../assets/check.svg" alt=""> Niveau AA</p>
+            </div>
+        </article>
+        <article class="informationcards state-success">
+            <div class="infocard">
+                <h2 class="style2">Over ons</h2>
+                <p class="normal-text">thebin.nl/over-ons</p>
+            </div>
+            <div class="horizontal-meter">
+                <meter max="100" value="100"></meter>
+                <span class="percentage"></span>
+            </div>
+            <div class="welkniveau">
+                <p class="normal-text"> <img src="../assets/check.svg" alt=""> Niveau A</p>
+                <p class="normal-text"> <img src="../assets/check.svg" alt=""> Niveau AA</p>
+            </div>
+        </article>
+        <article class="informationcards state-success">
+            <div class="infocard">
+                <h2 class="style2">Over ons</h2>
+                <p class="normal-text">thebin.nl/over-ons</p>
+            </div>
+            <div class="horizontal-meter">
+                <meter max="100" value="100"></meter>
+                <span class="percentage"></span>
+            </div>
+            <div class="welkniveau">
+                <p class="normal-text"> <img src="../assets/check.svg" alt=""> Niveau A</p>
+                <p class="normal-text"> <img src="../assets/check.svg" alt=""> Niveau AA</p>
+            </div>
+        </article>
+        <article class="informationcards state-success">
+            <div class="infocard">
+                <h2 class="style2">Over ons</h2>
+                <p class="normal-text">thebin.nl/over-ons</p>
+            </div>
+            <div class="horizontal-meter">
+                <meter max="100" value="100"></meter>
+                <span class="percentage"></span>
+            </div>
+            <div class="welkniveau">
+                <p class="normal-text"> <img src="../assets/check.svg" alt=""> Niveau A</p>
+                <p class="normal-text"> <img src="../assets/check.svg" alt=""> Niveau AA</p>
+            </div>
+        </article>
+        <article class="informationcards state-success">
+            <div class="infocard">
+                <h2 class="style2">Over ons</h2>
+                <p class="normal-text">thebin.nl/over-ons</p>
+            </div>
+            <div class="horizontal-meter">
+                <meter max="100" value="100"></meter>
+                <span class="percentage"></span>
+            </div>
+            <div class="welkniveau">
+                <p class="normal-text"> <img src="../assets/check.svg" alt=""> Niveau A</p>
+                <p class="normal-text"> <img src="../assets/check.svg" alt=""> Niveau AA</p>
+            </div>
+        </article>
+        <article class="informationcards state-success">
+            <div class="infocard">
+                <h2 class="style2">Over ons</h2>
+                <p class="normal-text">thebin.nl/over-ons</p>
+            </div>
+            <div class="horizontal-meter">
+                <meter max="100" value="100"></meter>
+                <span class="percentage"></span>
+            </div>
+            <div class="welkniveau">
+                <p class="normal-text"> <img src="../assets/check.svg" alt=""> Niveau A</p>
+                <p class="normal-text"> <img src="../assets/check.svg" alt=""> Niveau AA</p>
+            </div>
+        </article>
+        <article class="informationcards state-success">
+            <div class="infocard">
+                <h2 class="style2">Over ons</h2>
+                <p class="normal-text">thebin.nl/over-ons</p>
+            </div>
+            <div class="horizontal-meter">
+                <meter max="100" value="100"></meter>
+                <span class="percentage"></span>
+            </div>
+            <div class="welkniveau">
+                <p class="normal-text"> <img src="../assets/check.svg" alt=""> Niveau A</p>
+                <p class="normal-text"> <img src="../assets/check.svg" alt=""> Niveau AA</p>
+            </div>
+        </article>
+        <article class="informationcards state-success">
+            <div class="infocard">
+                <h2 class="style2">Over ons</h2>
+                <p class="normal-text">thebin.nl/over-ons</p>
+            </div>
+            <div class="horizontal-meter">
+                <meter max="100" value="100"></meter>
+                <span class="percentage"></span>
+            </div>
+            <div class="welkniveau">
+                <p class="normal-text"> <img src="../assets/check.svg" alt=""> Niveau A</p>
+                <p class="normal-text"> <img src="../assets/check.svg" alt=""> Niveau AA</p>
+            </div>
+        </article>
+        <article class="informationcards state-success">
+            <div class="infocard">
+                <h2 class="style2">Over ons</h2>
+                <p class="normal-text">thebin.nl/over-ons</p>
+            </div>
+            <div class="horizontal-meter">
+                <meter max="100" value="100"></meter>
+                <span class="percentage"></span>
+            </div>
+            <div class="welkniveau">
+                <p class="normal-text"> <img src="../assets/check.svg" alt=""> Niveau A</p>
+                <p class="normal-text"> <img src="../assets/check.svg" alt=""> Niveau AA</p>
+            </div>
+        </article>
+        <article class="informationcards state-success">
+            <div class="infocard">
+                <h2 class="style2">Over ons</h2>
+                <p class="normal-text">thebin.nl/over-ons</p>
+            </div>
+            <div class="horizontal-meter">
+                <meter max="100" value="100"></meter>
+                <span class="percentage"></span>
+            </div>
+            <div class="welkniveau">
+                <p class="normal-text"> <img src="../assets/check.svg" alt=""> Niveau A</p>
+                <p class="normal-text"> <img src="../assets/check.svg" alt=""> Niveau AA</p>
+            </div>
+        </article>
+    </main>    
+  </body>
 </html>
