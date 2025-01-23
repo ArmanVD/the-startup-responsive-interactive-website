@@ -11,6 +11,7 @@ De oplossing is een moderne, responsieve website met een focus op eenvoud, toega
 ### Beschrijving van de website
 
 AccessDash biedt gebruikers de mogelijkheid om op een visuele manier voortgang en gegevens te volgen. De belangrijkste onderdelen van de website zijn:
+
 	•	Progress rings: Cirkeldiagrammen die voortgang of percentages aangeven.
 	•	Meter-elementen: Horizontale balken die specifieke waarden tonen.
 	•	Toegankelijkheid: Toegankelijke ontwerpprincipes zoals hoge kleurcontrasten, semantische HTML, en ARIA-labels.
@@ -19,11 +20,14 @@ AccessDash biedt gebruikers de mogelijkheid om op een visuele manier voortgang e
 ### Responsive ontwerp
 
 De website is volledig responsief en werkt op alle apparaten. Hieronder enkele screenshots van de verschillende breakpoints:
+
 	1.	Mobile (max-width: 768px)
 	•	Compact ontwerp met één kolom.
 	•	Progress rings en meter-elementen zijn gestapeld voor een betere weergave.
+
 	2.	Tablet (768px - 1024px)
 	•	Twee kolommen met meer ruimte voor de elementen.
+
 	3.	Desktop (min-width: 1024px)
 	•	Volledig layout met meerdere kolommen en een overzichtelijke weergave.
 
