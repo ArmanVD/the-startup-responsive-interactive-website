@@ -449,3 +449,7 @@ main {
         }
     }
 }
+
+@view-transition{
+    navigation: auto;
+}
